@@ -5,8 +5,8 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def hello():
-    return 'Hello, world!'
+def home():
+    return 'App is running!'
 
 @app.route('/belgium')
 def goodbye():
@@ -20,6 +20,3 @@ def submit():
     print(f'Received: {eventName}, {eventHead}')
     
     return jsonify({"message": "Event registered!"})
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
