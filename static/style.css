@@ -1,0 +1,91 @@
+h1 {
+    font-family: 'Inter';
+    text-align: center;
+    font-size: 52px;
+    
+}
+
+body {
+    font-family: 'Inter';
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;        
+    flex-wrap: wrap;       
+    align-items: left;    
+    margin-bottom: 10px;
+}
+
+.input-block {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.button {
+    font-size: 15px;
+    padding: 5px;
+    background-color: #2ecff3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#header-block {
+    display: flex;
+}
+
+#header-buffer {
+    width: 150px;
+    margin: 20px;
+}
+
+#title {
+    margin: 20px auto;
+}
+
+#logo {
+    margin: 20px;
+    width: 150px;
+    height: auto;
+}
+
+#fund-requested-block {
+    flex-basis: 100%;
+    /* display: flex; */
+}
+
+#fund-budget-block {
+    display: none;
+}
+
+#comments {
+    flex-basis: 60%;
+    min-height: 30px;
+    margin-bottom: 10px;
+}
+
+#button-submit-container {
+    margin-top: 20px;
+    text-align: center;
+    flex-basis: 100%;
+    display: inline-block;
+}
+
+#button-submit {
+    margin: 0 auto;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

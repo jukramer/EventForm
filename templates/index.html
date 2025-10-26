@@ -3,28 +3,113 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Event Form - basic HTML template" />
+    <meta name="description" content="Event Form" />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>Event Form</title>
     <!-- Optional: link your stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
     <header>
-        <h1>Event Form</h1>
+        <div id="header-block">
+            <div id="header-buffer"></div>
+            <h1 id="title">ESN Delft Event Form</h1>
+            <a href="https://www.esn-delft.nl">
+                <img src="../resources/esn-delft-logo-color.png" id="logo">
+            </a>
+        </div>
+        <p>Please fill out all relevant information about your event here :)</p>
     </header>
 
     <main>
-        <form id="myForm">
-            <input type="text" id="event-name" name="Event Name" placeholder="Enter name" required><br>
-            <input type="text" id="event-head" name="Event Head" placeholder="Enter head" required><br>
-            <button type="submit">Submit</button>
-        </form>
+        <!-- General Info -->
+        <div id="general-info" class="form-block" required>
+            <h2>General Info</h2>
+            <form class="form">
+                <div class = "input-block">
+                    <label for="event-name" class="form-label">Event Name:</label><br>
+                    <input type="text" id="event-name"><br><br>
+                </div>
 
-        <p id="response"></p>
+                <div class = "input-block">
+                <label for="event-date" class="form-label">Date:</label><br>
+                <input type="date" id="event-date"><br><br>
+                </div>
+
+                <div class = "input-block">
+                <label for="event-date" class="form-label">Time:</label><br>
+                <input type="time" id="event-time"><br><br>
+                </div>
+
+                <div class = "input-block">
+                <label for="event-loc" class="form-label">Location:</label><br>
+                <input type="text" id="event-loc"><br><br>
+                </div>
+
+                <div class = "input-block">
+                <label for="event-head" class="form-label">Event Head:</label><br>
+                <input type="text" id="event-head"><br><br>
+                </div>
+
+                <div class = "input-block">
+                <label for="event-description" class="form-label">Description:</label><br>
+                <input type="text" id="event-description"><br><br>
+                </div>
+            </form>
+        </div>
+
+        <!-- Budget -->
+        <div id="budget" class="form-block" required>
+            <h2>Event Budget</h2>
+            <form class="form">
+                <div class = "input-block">
+                <label for="pre-budget" class="form-label">Allocated Budget:</label><br>
+                <input type="text" id="pre-budget"><br><br>
+                </div>
+
+                <div class = "input-block">
+                <label for="post-budget" class="form-label">Actual Budget:</label><br>
+                <input type="text" id="post-budget"><br><br>
+                </div>
+
+                <div class = "input-block" id = "fund-requested-block">
+                <label for="fund-requested" class="form-label">Student Community Fund Requested:</label>
+                <input type="checkbox" id="fund-requested"><br><br>
+                </div>
+
+                <div class = "input-block" id="fund-budget-block">
+                <label for="fund-budget" class="form-label">Amount obtained:</label><br>
+                <input type="number" id="fund-budget"><br><br>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tasks -->
+        <div id="tasks" class="form-block" required>
+            <h2>Task Distribution</h2>
+            <form class="form">
+                <div class = "input-block">
+                <label for="tasks-planning" class="form-label">Planning:</label><br>
+                <input type="text" id="tasks-planning"><br><br>
+            </form>
+        </div>
+
+        <!-- Comments -->
+        <div id="comments" class="form-block" required>
+            <h2>Comments</h2>
+            <form class="form">
+                <input type="text" id="comments"><br><br>
+            </form>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="buttom-submit-container">
+            <button id="button-submit" class="button">Submit form</button>
+        </div>
     </main>
 
     <footer>
-        <small>&copy; 2025</small>
+        <small>Copyright &copy; 2025 Erasmus Student Network Delft. All rights reserved.</small>
     </footer>
 
     <script src="../static/script.js"></script>
