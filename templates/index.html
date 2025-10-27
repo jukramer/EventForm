@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Event Form" />
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <title>Event Form</title>
-    <!-- Optional: link your stylesheet -->
-    <link rel="stylesheet" href="../static/style.css" />
+    <title>Event Form</title>     <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
     <header>
@@ -22,90 +20,89 @@
     </header>
 
     <main>
-        <!-- General Info -->
-        <div id="general-info" class="form-block" required>
-            <h2>General Info</h2>
-            <form class="form">
+        <form class="form" id="event-form" action="submit" method="POST">
+            <!-- General Info -->
+            <div id="general-info" class="form-block" required>
+                <h2 class="form-block-title">General Info</h2>
                 <div class = "input-block">
                     <label for="event-name" class="form-label">Event Name:</label><br>
                     <input type="text" id="event-name"><br><br>
                 </div>
 
                 <div class = "input-block">
-                <label for="event-date" class="form-label">Date:</label><br>
-                <input type="date" id="event-date"><br><br>
+                    <label for="event-date" class="form-label">Date:</label><br>
+                    <input type="date" id="event-date"><br><br>
                 </div>
 
                 <div class = "input-block">
-                <label for="event-date" class="form-label">Time:</label><br>
-                <input type="time" id="event-time"><br><br>
+                    <label for="event-date" class="form-label">Time:</label><br>
+                    <input type="time" id="event-time"><br><br>
                 </div>
 
                 <div class = "input-block">
-                <label for="event-loc" class="form-label">Location:</label><br>
-                <input type="text" id="event-loc"><br><br>
+                    <label for="event-loc" class="form-label">Location:</label><br>
+                    <input type="text" id="event-loc"><br><br>
                 </div>
 
                 <div class = "input-block">
-                <label for="event-head" class="form-label">Event Head:</label><br>
-                <input type="text" id="event-head"><br><br>
+                    <label for="event-head" class="form-label">Event Head:</label><br>
+                    <input type="text" id="event-head"><br><br>
                 </div>
 
                 <div class = "input-block">
-                <label for="event-description" class="form-label">Description:</label><br>
-                <input type="text" id="event-description"><br><br>
+                    <label for="event-description" class="form-label">Description:</label><br>
+                    <input type="text" id="event-description"><br><br>
                 </div>
-            </form>
-        </div>
+            </div>
 
-        <!-- Budget -->
-        <div id="budget" class="form-block" required>
-            <h2>Event Budget</h2>
-            <form class="form">
-                <div class = "input-block">
-                <label for="pre-budget" class="form-label">Allocated Budget:</label><br>
-                <input type="text" id="pre-budget"><br><br>
-                </div>
+            <!-- Budget -->
+            <div id="budget" class="form-block" required>
+                <h2 class="form-block-title">Event Budget</h2>
+                    <div class = "input-block">
+                    <label for="pre-budget" class="form-label">Allocated Budget:</label><br>
+                    <input type="text" id="pre-budget"><br><br>
+                    </div>
 
-                <div class = "input-block">
-                <label for="post-budget" class="form-label">Actual Budget:</label><br>
-                <input type="text" id="post-budget"><br><br>
-                </div>
+                    <div class = "input-block">
+                    <label for="post-budget" class="form-label">Actual Budget:</label><br>
+                    <input type="text" id="post-budget"><br><br>
+                    </div>
 
-                <div class = "input-block" id = "fund-requested-block">
-                <label for="fund-requested" class="form-label">Student Community Fund Requested:</label>
-                <input type="checkbox" id="fund-requested"><br><br>
-                </div>
+                    <div class = "input-block" id = "fund-requested-block">
+                    <label for="fund-requested" class="form-label">Student Community Fund Requested:</label>
+                    <input type="checkbox" id="fund-requested"><br><br>
+                    </div>
 
-                <div class = "input-block" id="fund-budget-block">
-                <label for="fund-budget" class="form-label">Amount obtained:</label><br>
-                <input type="number" id="fund-budget"><br><br>
-                </div>
-            </form>
-        </div>
+                    <div class = "input-block" id="fund-budget-block">
+                    <label for="fund-budget" class="form-label">Amount obtained:</label><br>
+                    <input type="number" id="fund-budget"><br><br>
+                    </div>
+            </div>
 
-        <!-- Tasks -->
-        <div id="tasks" class="form-block" required>
-            <h2>Task Distribution</h2>
-            <form class="form">
-                <div class = "input-block">
+            <!-- Tasks -->
+            <div id="tasks" class="form-block" required>
+                <div class="input-block">
+                <h2 class="form-block-title">Task Distribution</h2> 
                 <label for="tasks-planning" class="form-label">Planning:</label><br>
                 <input type="text" id="tasks-planning"><br><br>
-            </form>
-        </div>
+                </div>
+            </div>
 
-        <!-- Comments -->
-        <div id="comments" class="form-block" required>
-            <h2>Comments</h2>
-            <form class="form">
-                <input type="text" id="comments"><br><br>
-            </form>
-        </div>
+            <!-- Comments -->
+            <div id="comments" class="form-block">
+                <div class="input-block" id="comment-block">
+                    <h2 class="form-block-title">Comments</h2>
+                    <textarea rows="4" cols="50" type="text" id="comment-input"></textarea><br><br>
+                </div>
+            </div>
 
-        <!-- Submit Button -->
-        <div id="buttom-submit-container">
-            <button id="button-submit" class="button">Submit form</button>
-        </div>
+            <p id="response"></p>
+
+            <!-- Submit Button -->
+            <div id="buttom-submit-container">
+                <button type="submit" id="button-submit" class="button">Submit form</button>
+            </div>
+        </form>
     </main>
 
     <footer>

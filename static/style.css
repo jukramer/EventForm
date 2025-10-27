@@ -11,9 +11,7 @@ body {
     margin: 0 auto;
 }
 
-.form {
-    display: flex;        
-    flex-wrap: wrap;       
+.form { 
     align-items: left;    
     margin-bottom: 10px;
 }
@@ -57,6 +55,15 @@ body {
     height: auto;
 }
 
+.form-block {
+    display: flex;        
+    flex-wrap: wrap;      
+}
+
+.form-block-title {
+    flex-basis: 100%;
+}
+
 #fund-requested-block {
     flex-basis: 100%;
     /* display: flex; */
@@ -66,10 +73,13 @@ body {
     display: none;
 }
 
-#comments {
-    flex-basis: 60%;
+#comment-block {
+    flex-basis: 100%;
+}
+
+#comment-input {
     min-height: 30px;
-    margin-bottom: 10px;
+    min-width: 60%;
 }
 
 #button-submit-container {

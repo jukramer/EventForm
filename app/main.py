@@ -14,9 +14,8 @@ def goodbye():
 
 @app.route('/api/submit', methods=['POST'])
 def submit():
+    print('received request')
     data = request.get_json()
-    eventName = data.get('eventName')
-    eventHead = data.get('eventHead')
-    print(f'Received: {eventName}, {eventHead}')
+    print(data)
     
     return jsonify({"message": "Event registered!"})
