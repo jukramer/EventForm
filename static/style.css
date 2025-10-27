@@ -73,6 +73,10 @@ body {
     display: none;
 }
 
+#event-rating-block {
+    flex-basis: 100%;
+}
+
 #comment-block {
     flex-basis: 100%;
 }

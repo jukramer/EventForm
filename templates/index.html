@@ -81,17 +81,40 @@
 
             <!-- Tasks -->
             <div id="tasks" class="form-block" required>
+                    <h2 class="form-block-title">Task Distribution</h2> 
                 <div class="input-block">
-                <h2 class="form-block-title">Task Distribution</h2> 
-                <label for="tasks-planning" class="form-label">Planning:</label><br>
-                <input type="text" id="tasks-planning"><br><br>
+                    <label for="tasks-planning" class="form-label">Planning:</label><br>
+                    <input type="text" id="tasks-planning"><br><br>
+                </div>
+            </div>
+
+            <!-- Reflection -->
+             <div id="reflection" class="form-block">
+                <h2 class="form-block-title">Reflection</h2>
+                <div id="event-rating-block">
+                <label for="event-rating">Rating (/5):</label>
+                <select id="event-rating">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select><br>
+                </div><br><br>
+                <div class="input-block" id="ref-positive-block">
+                    <label id="ref-positive-label">What went well?</label><br>
+                    <textarea rows="4" cols="50" type="text" id="comment-input"></textarea><br><br>
+                </div>
+                <div class="input-block" id="ref-negative-block">
+                    <label id="ref-positive-label">What can be improved?</label><br>
+                    <textarea rows="4" cols="50" type="text" id="comment-input"></textarea><br><br>
                 </div>
             </div>
 
             <!-- Comments -->
             <div id="comments" class="form-block">
                 <div class="input-block" id="comment-block">
-                    <h2 class="form-block-title">Comments</h2>
+                    <h2 class="form-block-title">Additional Comments</h2>
                     <textarea rows="4" cols="50" type="text" id="comment-input"></textarea><br><br>
                 </div>
             </div>
